@@ -104,3 +104,10 @@ SELECT student_name
 FROM students
 ORDER BY student_id
 OFFSET 2 LIMIT 2;
+
+
+-- Query 6
+SELECT c.course_name, COUNT(e.student_id) AS students_enrolled
+FROM courses c
+LEFT JOIN enrollment e ON c.course_id = e.course_id
+GROUP BY c.course_name;
