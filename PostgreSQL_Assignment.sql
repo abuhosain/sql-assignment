@@ -98,3 +98,9 @@ WHERE course_id NOT IN (
     FROM enrollment
 );
 
+
+-- Query 5 
+SELECT student_name
+FROM students
+ORDER BY student_id
+OFFSET 2 LIMIT 2;
