@@ -89,3 +89,12 @@ WHERE student_id = (
     ORDER BY (frontend_mark + backend_mark) DESC
     LIMIT 1
 );
+
+
+-- Query 4
+DELETE FROM courses
+WHERE course_id NOT IN (
+    SELECT DISTINCT course_id
+    FROM enrollment
+);
+
