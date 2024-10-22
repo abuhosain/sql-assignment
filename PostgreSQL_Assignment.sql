@@ -68,3 +68,12 @@ SELECT * FROM enrollment;
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status)
 VALUES
     ('Abu Hosain', 20, 'abuhosainmin@gmail.com', 60, 58, NULL);
+
+
+-- Query 2
+
+SELECT s.student_name
+FROM students s
+JOIN enrollment e ON s.student_id = e.student_id
+JOIN courses c ON e.course_id = c.course_id
+WHERE c.course_name = 'Next.js';
