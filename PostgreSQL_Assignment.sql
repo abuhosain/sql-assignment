@@ -56,3 +56,15 @@ VALUES
     (1, 2),
     (2, 1),
     (3, 2);
+
+-- get all data from all table
+SELECT * FROM students;
+SELECT * FROM courses;
+SELECT * FROM enrollment;
+
+
+
+-- Query 1
+INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status)
+VALUES
+    ('Abu Hosain', 20, 'abuhosainmin@gmail.com', 60, 58, NULL);
